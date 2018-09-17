@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C690FFACC5895CF9A5CD41F /* Pods_TrackerBlocker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37C56B038155D553ED475F6 /* Pods_TrackerBlocker.framework */; };
+		C2B8EF8D49D3551B87918725 /* Pods_TrackerBlockerExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89BCABF44A63EC2BDD471A2D /* Pods_TrackerBlockerExtension.framework */; };
+		ED71F882214F9A8E008AED71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED71F881214F9A8E008AED71 /* AppDelegate.swift */; };
+		ED71F884214F9A8E008AED71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED71F883214F9A8E008AED71 /* ViewController.swift */; };
+		ED71F887214F9A8E008AED71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED71F885214F9A8E008AED71 /* Main.storyboard */; };
+		ED71F889214F9A90008AED71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED71F888214F9A90008AED71 /* Assets.xcassets */; };
+		ED71F88C214F9A90008AED71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED71F88A214F9A90008AED71 /* LaunchScreen.storyboard */; };
+		ED71F89A214F9ABA008AED71 /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = ED71F899214F9ABA008AED71 /* blockerList.json */; };
+		ED71F89C214F9ABA008AED71 /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED71F89B214F9ABA008AED71 /* ContentBlockerRequestHandler.swift */; };
+		ED71F8A0214F9ABA008AED71 /* TrackerBlockerExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ED71F897214F9ABA008AED71 /* TrackerBlockerExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EDD60281214FA5EE00EE383E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD60280214FA5EE00EE383E /* Constants.swift */; };
+		EDD60283214FA99700EE383E /* TrackerListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD60282214FA99700EE383E /* TrackerListParser.swift */; };
+		EDED9EC82150F48700F327BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD60280214FA5EE00EE383E /* Constants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED71F89E214F9ABA008AED71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED71F876214F9A8E008AED71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED71F896214F9ABA008AED71;
+			remoteInfo = TrackerBlockerExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ED71F8A4214F9ABA008AED71 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				ED71F8A0214F9ABA008AED71 /* TrackerBlockerExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		04A2F7DDA551FE3FEECE4567 /* Pods-TrackerBlocker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackerBlocker.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrackerBlocker/Pods-TrackerBlocker.release.xcconfig"; sourceTree = "<group>"; };
+		89BCABF44A63EC2BDD471A2D /* Pods_TrackerBlockerExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrackerBlockerExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B1FF02F6445A8B899F9BAF4 /* Pods-TrackerBlockerExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackerBlockerExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrackerBlockerExtension/Pods-TrackerBlockerExtension.release.xcconfig"; sourceTree = "<group>"; };
+		99EF26C645D1A6A2DE185001 /* Pods-TrackerBlocker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackerBlocker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrackerBlocker/Pods-TrackerBlocker.debug.xcconfig"; sourceTree = "<group>"; };
+		D37C56B038155D553ED475F6 /* Pods_TrackerBlocker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrackerBlocker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCB06D8F0A5A9A0241441D0F /* Pods-TrackerBlockerExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackerBlockerExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrackerBlockerExtension/Pods-TrackerBlockerExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		ED71F87E214F9A8E008AED71 /* TrackerBlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackerBlocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED71F881214F9A8E008AED71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ED71F883214F9A8E008AED71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ED71F886214F9A8E008AED71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED71F888214F9A90008AED71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED71F88B214F9A90008AED71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED71F88D214F9A90008AED71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED71F897214F9ABA008AED71 /* TrackerBlockerExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TrackerBlockerExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED71F899214F9ABA008AED71 /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		ED71F89B214F9ABA008AED71 /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
+		ED71F89D214F9ABA008AED71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDD60280214FA5EE00EE383E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EDD60282214FA99700EE383E /* TrackerListParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerListParser.swift; sourceTree = "<group>"; };
+		EDED9EC6214FF28A00F327BF /* TrackerBlockerExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrackerBlockerExtension.entitlements; sourceTree = "<group>"; };
+		EDED9EC72150F39E00F327BF /* TrackerBlocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrackerBlocker.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED71F87B214F9A8E008AED71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C690FFACC5895CF9A5CD41F /* Pods_TrackerBlocker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED71F894214F9ABA008AED71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2B8EF8D49D3551B87918725 /* Pods_TrackerBlockerExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1256075EDC5FD03D18374D3D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99EF26C645D1A6A2DE185001 /* Pods-TrackerBlocker.debug.xcconfig */,
+				04A2F7DDA551FE3FEECE4567 /* Pods-TrackerBlocker.release.xcconfig */,
+				DCB06D8F0A5A9A0241441D0F /* Pods-TrackerBlockerExtension.debug.xcconfig */,
+				8B1FF02F6445A8B899F9BAF4 /* Pods-TrackerBlockerExtension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A853973C74195E7677362B2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D37C56B038155D553ED475F6 /* Pods_TrackerBlocker.framework */,
+				89BCABF44A63EC2BDD471A2D /* Pods_TrackerBlockerExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED71F875214F9A8E008AED71 = {
+			isa = PBXGroup;
+			children = (
+				ED71F880214F9A8E008AED71 /* TrackerBlocker */,
+				ED71F898214F9ABA008AED71 /* TrackerBlockerExtension */,
+				ED71F87F214F9A8E008AED71 /* Products */,
+				1256075EDC5FD03D18374D3D /* Pods */,
+				A853973C74195E7677362B2B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ED71F87F214F9A8E008AED71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED71F87E214F9A8E008AED71 /* TrackerBlocker.app */,
+				ED71F897214F9ABA008AED71 /* TrackerBlockerExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED71F880214F9A8E008AED71 /* TrackerBlocker */ = {
+			isa = PBXGroup;
+			children = (
+				EDED9EC72150F39E00F327BF /* TrackerBlocker.entitlements */,
+				ED71F881214F9A8E008AED71 /* AppDelegate.swift */,
+				ED71F883214F9A8E008AED71 /* ViewController.swift */,
+				ED71F885214F9A8E008AED71 /* Main.storyboard */,
+				ED71F888214F9A90008AED71 /* Assets.xcassets */,
+				ED71F88A214F9A90008AED71 /* LaunchScreen.storyboard */,
+				ED71F88D214F9A90008AED71 /* Info.plist */,
+				EDD60280214FA5EE00EE383E /* Constants.swift */,
+				EDD60282214FA99700EE383E /* TrackerListParser.swift */,
+			);
+			path = TrackerBlocker;
+			sourceTree = "<group>";
+		};
+		ED71F898214F9ABA008AED71 /* TrackerBlockerExtension */ = {
+			isa = PBXGroup;
+			children = (
+				EDED9EC6214FF28A00F327BF /* TrackerBlockerExtension.entitlements */,
+				ED71F899214F9ABA008AED71 /* blockerList.json */,
+				ED71F89B214F9ABA008AED71 /* ContentBlockerRequestHandler.swift */,
+				ED71F89D214F9ABA008AED71 /* Info.plist */,
+			);
+			path = TrackerBlockerExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED71F87D214F9A8E008AED71 /* TrackerBlocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED71F890214F9A90008AED71 /* Build configuration list for PBXNativeTarget "TrackerBlocker" */;
+			buildPhases = (
+				9BC80921846FC5366B3A948E /* [CP] Check Pods Manifest.lock */,
+				ED71F87A214F9A8E008AED71 /* Sources */,
+				ED71F87B214F9A8E008AED71 /* Frameworks */,
+				ED71F87C214F9A8E008AED71 /* Resources */,
+				ED71F8A4214F9ABA008AED71 /* Embed App Extensions */,
+				388FAD9C66F6FECEFD9C8712 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED71F89F214F9ABA008AED71 /* PBXTargetDependency */,
+			);
+			name = TrackerBlocker;
+			productName = TrackerBlocker;
+			productReference = ED71F87E214F9A8E008AED71 /* TrackerBlocker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED71F896214F9ABA008AED71 /* TrackerBlockerExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED71F8A1214F9ABA008AED71 /* Build configuration list for PBXNativeTarget "TrackerBlockerExtension" */;
+			buildPhases = (
+				D3AC18DE560B9ECDEBAE07F5 /* [CP] Check Pods Manifest.lock */,
+				ED71F893214F9ABA008AED71 /* Sources */,
+				ED71F894214F9ABA008AED71 /* Frameworks */,
+				ED71F895214F9ABA008AED71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrackerBlockerExtension;
+			productName = TrackerBlockerExtension;
+			productReference = ED71F897214F9ABA008AED71 /* TrackerBlockerExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED71F876214F9A8E008AED71 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Nikolay Derkach";
+				TargetAttributes = {
+					ED71F87D214F9A8E008AED71 = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					ED71F896214F9ABA008AED71 = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = ED71F879214F9A8E008AED71 /* Build configuration list for PBXProject "TrackerBlocker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED71F875214F9A8E008AED71;
+			productRefGroup = ED71F87F214F9A8E008AED71 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED71F87D214F9A8E008AED71 /* TrackerBlocker */,
+				ED71F896214F9ABA008AED71 /* TrackerBlockerExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED71F87C214F9A8E008AED71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED71F88C214F9A90008AED71 /* LaunchScreen.storyboard in Resources */,
+				ED71F889214F9A90008AED71 /* Assets.xcassets in Resources */,
+				ED71F887214F9A8E008AED71 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED71F895214F9ABA008AED71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED71F89A214F9ABA008AED71 /* blockerList.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		388FAD9C66F6FECEFD9C8712 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TrackerBlocker/Pods-TrackerBlocker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrackerBlocker/Pods-TrackerBlocker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BC80921846FC5366B3A948E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrackerBlocker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3AC18DE560B9ECDEBAE07F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrackerBlockerExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED71F87A214F9A8E008AED71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED71F884214F9A8E008AED71 /* ViewController.swift in Sources */,
+				ED71F882214F9A8E008AED71 /* AppDelegate.swift in Sources */,
+				EDD60281214FA5EE00EE383E /* Constants.swift in Sources */,
+				EDD60283214FA99700EE383E /* TrackerListParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED71F893214F9ABA008AED71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED71F89C214F9ABA008AED71 /* ContentBlockerRequestHandler.swift in Sources */,
+				EDED9EC82150F48700F327BF /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED71F89F214F9ABA008AED71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED71F896214F9ABA008AED71 /* TrackerBlockerExtension */;
+			targetProxy = ED71F89E214F9ABA008AED71 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED71F885214F9A8E008AED71 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED71F886214F9A8E008AED71 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED71F88A214F9A90008AED71 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED71F88B214F9A90008AED71 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED71F88E214F9A90008AED71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ED71F88F214F9A90008AED71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED71F891214F9A90008AED71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99EF26C645D1A6A2DE185001 /* Pods-TrackerBlocker.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TrackerBlocker/TrackerBlocker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9GHXTK3SK7;
+				INFOPLIST_FILE = TrackerBlocker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.derka.TrackerBlocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED71F892214F9A90008AED71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04A2F7DDA551FE3FEECE4567 /* Pods-TrackerBlocker.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TrackerBlocker/TrackerBlocker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9GHXTK3SK7;
+				INFOPLIST_FILE = TrackerBlocker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.derka.TrackerBlocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ED71F8A2214F9ABA008AED71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCB06D8F0A5A9A0241441D0F /* Pods-TrackerBlockerExtension.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = TrackerBlockerExtension/TrackerBlockerExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9GHXTK3SK7;
+				INFOPLIST_FILE = TrackerBlockerExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.derka.TrackerBlocker.TrackerBlockerExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED71F8A3214F9ABA008AED71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B1FF02F6445A8B899F9BAF4 /* Pods-TrackerBlockerExtension.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = TrackerBlockerExtension/TrackerBlockerExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9GHXTK3SK7;
+				INFOPLIST_FILE = TrackerBlockerExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.derka.TrackerBlocker.TrackerBlockerExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED71F879214F9A8E008AED71 /* Build configuration list for PBXProject "TrackerBlocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED71F88E214F9A90008AED71 /* Debug */,
+				ED71F88F214F9A90008AED71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED71F890214F9A90008AED71 /* Build configuration list for PBXNativeTarget "TrackerBlocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED71F891214F9A90008AED71 /* Debug */,
+				ED71F892214F9A90008AED71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED71F8A1214F9ABA008AED71 /* Build configuration list for PBXNativeTarget "TrackerBlockerExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED71F8A2214F9ABA008AED71 /* Debug */,
+				ED71F8A3214F9ABA008AED71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED71F876214F9A8E008AED71 /* Project object */;
+}

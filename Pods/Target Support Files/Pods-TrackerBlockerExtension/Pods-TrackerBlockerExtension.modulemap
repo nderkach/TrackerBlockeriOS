@@ -1,0 +1,6 @@
+framework module Pods_TrackerBlockerExtension {
+  umbrella header "Pods-TrackerBlockerExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}
